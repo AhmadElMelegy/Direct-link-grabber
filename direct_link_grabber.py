@@ -1,4 +1,4 @@
-import requests, sys, re, json,urllib2
+import sys, re, json,urllib2
 
 def get_domain(url):
     DRIVE_INDICATOR = 'drive.google.com'
