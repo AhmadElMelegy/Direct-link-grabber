@@ -1,14 +1,14 @@
 import requests, sys, re, json,urllib2
 
 def get_domain(url):
-    DRIVE_INDECATOR = 'drive.google.com'
+    DRIVE_INDICATOR = 'drive.google.com'
     DROPBOX_INDICATOR = 'dropbox.com'
-    if DRIVE_INDECATOR in url:
+    if DRIVE_INDICATOR in url:
         domain = "GD"
     elif DROPBOX_INDICATOR in url:
         domain = "DB"
     else:
-        print "You currently deal with Google Drive and DropBox ONLY !"
+        print "We currently deal with Google Drive and DropBox ONLY !"
         sys.exit(0)
     return domain
 
@@ -64,4 +64,3 @@ if domain == "GD":
     generate_gd_result(url)
 elif domain == "DB":
     generate_db_result(url)
-
