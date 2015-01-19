@@ -15,8 +15,8 @@ def get_domain(url):
 def get_gd_file_id(url):
     found = re.search('/d/(.+?)/view', url)
     if found:
-        id = found.group(1)
-        return id
+        file_id = found.group(1)
+        return file_id
     else:
          print "Error"
          sys.exit(0)
