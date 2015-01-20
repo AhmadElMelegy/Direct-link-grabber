@@ -1,4 +1,4 @@
-import sys, re, json,urllib2
+import sys, re, json, urllib2
 
 def get_domain(url):
     DRIVE_INDICATOR = 'drive.google.com'
@@ -50,12 +50,12 @@ def generate_gd_result(url):
     file_id = get_gd_file_id(url)
     direct_link = get_gd_direct_link(file_id)
     short_url = shorten_url(direct_link)
-    print "Direct link:\n%s" %direct_link
-    print "Short URL: %s" %short_url
+    print "Direct link:\n %s" % direct_link
+    print "Short URL: %s" % short_url
 
 def generate_db_result(url):
     direct_link = get_db_direct_link(url)
-    print "Direct link:\n%s" %direct_link    
+    print "Direct link:\n %s" % direct_link    
 
 url = raw_input("Enter URL of a file on Google Drive or DropBox: ")
 domain = get_domain(url)
